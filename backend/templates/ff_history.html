@@ -1,0 +1,40 @@
+{% extends "historybase.html" %}
+
+{% block main %}
+
+<article class="games" id="ff-timeline">
+    <section class="logos">
+    <a href="#ff1"><img src="{{ url_for('static', filename='images/ff1-logo.jpg') }}" alt="ff1 logo">
+    <span class="year"></span></a>
+
+    <a href="#ff2"><img src="{{ url_for('static', filename='images/ff2-logo.jpg') }}" alt="ff2 logo">
+    <span class="year"></span></a>
+
+    <a href="#ff3"><img src="{{ url_for('static', filename='images/ff3-logo.jpg') }}" alt="ff3 logo">
+    <span class="year"></span></a>
+
+    <a href="#ff4"><img src="{{ url_for('static', filename='images/ff4-logo.jpg') }}" alt="ff4 logo">
+    <span class="year"></span></a>
+
+    <a href="#ff5"><img src="{{ url_for('static', filename='images/ff5-logo.jpg') }}" alt="ff5 logo">
+    <span class="year"></span></a>
+
+    <a href="#ff6"><img src="{{ url_for('static', filename='images/ff6
+      -logo.jpg') }}" alt="ff6 sword logo">
+    <span class="year"></span></a>
+  </section>
+  </article>
+
+<section class="games" id="ff1"></section>
+
+<section class="games" id="ff2"></section>
+
+<section class="games" id="ff3"></section>
+
+<section class="games" id="ff4"></section>
+
+<section class="games" id="ff5"></section>
+
+<section class="games" id="ff6"></section>
+
+{% endblock %}

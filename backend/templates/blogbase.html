@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Have a seat over there please</title>
+  </head>
+
+  <nav id="main-nav">
+    <ul>
+      <a href="http://192.168.0.155:3000/">Home</a>
+      <a href="{{ url_for('history') }}">History</a>
+      <a href="{{ url_for('music') }}">Music</a>
+      <a href="{{ url_for('blog') }}">Blog</a>
+      <a href="{{ url_for('forum') }}">Forum</a>
+    </ul>
+  </nav>
+
+    <body class="games" id="home">
+        <section class="blog-container" id="">
+            {% block main%}
+            {% endblock %}
+        </section>
+    </body>
+
+</html>

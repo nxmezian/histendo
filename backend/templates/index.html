@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Histendo</title>
+  </head>
+
+  <body class="games" id="home">
+    <img src="{{ url_for('static', filename='images/histendo.png') }}" id="histendo-logo" alt="Histendo logo">
+  </body>
+
+  <div class="icon">
+
+    <a href="{{ url_for('history') }}" class="icon-link">
+      <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon">
+      <span class="text">Games</span>
+    </a>
+    
+    <a href="{{ url_for('music') }}" class="icon-link">
+      <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon">
+      <span class="text">Music</span>
+    </a>
+    
+    <a href="{{ url_for('blog') }}" class="icon-link">
+      <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon">
+      <span class="text">Blog</span>
+    </a>
+    
+    <a href="{{ url_for('forum') }}" class="icon-link">
+      <img src="{{ url_for('static', filename='images/icon.png') }}" alt="icon">
+      <span class="text">Forum</span>
+    </a>
+    
+  </div>
+
+
+
+</html>

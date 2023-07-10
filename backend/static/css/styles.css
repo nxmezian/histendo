@@ -1,0 +1,455 @@
+body{
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: sans-serif;
+}
+
+.icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none; /* Remove link underline */
+  color: inherit; /* Inherit link color */
+}
+
+.text {
+  margin-top: 0px; /* Adjust as needed */
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.icon img{
+  margin-top: 10vh;
+  padding:10vh;
+  padding-bottom: 1vh;
+  width: 15vh;
+  transition: filter 0.3s ease-in-out;
+}
+
+.icon img:hover {
+  filter: brightness(2);
+}
+
+ul {
+  display: inline;
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-radius: 25px;
+  border-color:black;
+}
+
+li{
+  background-color: black;
+}
+
+.hundred{
+  padding-top: 50px;
+}
+
+article img {
+  height: 10vh;
+  width: 15vh;
+}
+
+#logo{
+  position: absolute;
+  left: 42%;
+  top: 10%;
+}
+
+#home{
+  background-image: url("/static/images/zelda.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#histendo-logo{
+  margin-top: 8vh;
+  justify-content: center;
+  height: 12vh;
+}
+
+#history{
+  background-image: url("/static/images/history-wallpaper.jpg");
+}
+
+#history img{
+  padding-left: 50;
+}
+
+#history-links{
+  padding: 50px;
+  border: 5px solid black;
+  border-radius: 25px;
+  background-color: black;
+}
+
+.games {
+  height: 100vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid{
+  height: 100vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#history {
+  background-image: url("/static/images/history-wallpaper.jpg");
+}
+
+#history-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  grid-gap: 100px; /* Adjust the gap between grid items */
+  justify-items: center;
+}
+
+
+#history-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#history-links img {
+  max-width: 100%; /* Ensure images fit within their grid cells */
+}
+
+.games .logos a {
+  text-decoration: none;
+}
+
+.games .logos a:visited {
+  color: black;
+}
+
+.logos {
+  display: flex;
+  justify-content: center; /* Change to center to horizontally center the logos */
+  padding: 5vh;
+  text-decoration: none;
+}
+
+.logos {
+margin-top: 70vh;
+}
+
+.logos a {
+  text-decoration: none;
+  margin: 0 2vh; /* Add margin to create space between the logos */
+}
+
+.year {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.year a{
+  text-decoration: none;
+}
+
+#zelda-timeline {
+  background-image: url("/static/images/history.jpg");
+}
+
+#totk {
+  background-image: url("/static/images/totk.jpg");
+}
+
+#botw {
+  background-image: url("/static/images/botw.jpg");
+}
+
+#skyward {
+  background-image: url("/static/images/skyward1.jpg");
+}
+
+#twilight {
+  background-image: url("/static/images/twilight.jpg");
+}
+
+#windwaker {
+  background-image: url("/static/images/windwaker.jpg");
+}
+
+#majora {
+  background-image: url("/static/images/majora.jpg");
+}
+
+#ocarina {
+  background-image: url("/static/images/ocarina.jpg");
+}
+
+#past {
+  background-image: url("/static/images/past.jpg");
+}
+
+#original {
+  background-image: url("/static/images/original.jpg");
+}
+
+#mario-timeline{
+  background-image: url("/static/images/mario-history.jpg");
+}
+
+#odyssey{
+  background-image: url("/static/images/odyssey.jpg");
+}
+
+#galaxy2{
+  background-image: url("/static/images/galaxy2.jpg");
+}
+
+#galaxy{
+  background-image: url("/static/images/galaxy.jpg");
+}
+
+#world3d{
+  background-image: url("/static/images/world3d.jpg");
+}
+
+#sunshine{
+  background-image: url("/static/images/sunshine.jpg");
+}
+
+#sixtyfour{
+  background-image: url("/static/images/64.jpg");
+}
+
+#world{
+  background-image: url("/static/images/world.jpg")
+}
+
+#bros {
+  background-image: url("/static/images/bros.jpg")
+}
+
+#metroid-timeline{
+  background-image: url("/static/images/metroid-history.jpg")
+}
+
+#metroidprime3{
+  background-image: url("/static/images/metroidrprime3.jpg")
+}
+
+#metroidprime2{
+  background-image: url("/static/images/metroidrprime2.jpg")
+}
+
+#metroidprime{
+  background-image: url("/static/images/metroidprime.jpg")
+}
+
+#supermetroid{
+  background-image: url("/static/images/supermetroid.jpg")
+}
+
+#metroid2{
+  background-image: url("/static/images/metroid2.jpg")
+}
+
+#metroid1{
+  background-image: url("/static/images/metroid1.jpg")
+}
+
+#ff-timeline{
+  background-image: url("/static/images/ff-history.jpg")
+}
+
+#ff1{
+  background-image: url("/static/images/ff1.jpg")
+}
+
+#ff2{
+  background-image: url("/static/images/ff2.jpg")
+}
+
+#ff3{
+  background-image: url("/static/images/ff2.jpg")
+}
+
+#ff4{
+  background-image: url("/static/images/ff4.jpg")
+}
+
+#ff5{
+  background-image: url("/static/images/ff5.jpg")
+}
+
+#ff6{
+  background-image: url("/static/images/ff6.jpg")
+}
+
+#pokemon-timeline{
+  background-image: url("/static/images/pkmn-timeline.jpg")
+}
+
+#pkmn-red{
+  background-image: url("/static/images/pkmn-red.jpg")
+}
+
+#pkmn-blue{
+  background-image: url("/static/images/pkmn-blue.jpg")
+}
+
+#pkmn-yellow{
+  background-image: url("/static/images/pkmn-yellow.jpg")
+}
+
+#pkmn-silver{
+  background-image: url("/static/images/pkmn-silver.jpg")
+}
+
+#pkmn-gold{
+  background-image: url("/static/images/pkmn-gold.jpg")
+}
+
+#pkmn-crystal{
+  background-image: url("/static/images/pkmn-crystal.jpg")
+}
+
+#sign-up{
+    text-align: center;
+}
+
+.music-intro-text{
+  margin-top: 10vh;
+  background: white;
+  border-radius: 25px;
+  padding: 5vh;
+  width: 150vh;
+}
+
+#main-nav {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #090909;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 100
+}
+
+#main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-nav a:hover {
+  color: #c1c1c1;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+}
+
+a:active {
+  color: blue;
+}
+
+nav a.active {
+  color: #1e1e1e;
+  background: white;
+}
+
+.nav-hidden {
+  display: none;
+}
+
+#music{
+  margin-top: 10vh;
+}
+
+#blog{
+  background-image: url("/static/images/blog.jpg");
+}
+
+.blog-container {
+  width: 60%; /* Set the width of the container to 80% of the screen */
+  padding: 5px;
+  margin: 50px auto 0; /* Center the container horizontally */
+  border: 5px solid black;
+  border-radius: 20px;
+  filter: blur  brightness(0.5);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  background: white;
+}
+
+
+.blog-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+}
+
+.blog {
+  width: 100%;
+  max-width: 80%;
+  margin-top: 50px;
+
+}
+
+#music{
+  background-image: url("/static/images/music.jpg");
+}
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 11px;
+  }
+}

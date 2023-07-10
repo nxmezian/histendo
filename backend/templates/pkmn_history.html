@@ -1,0 +1,40 @@
+{% extends "historybase.html" %}
+
+{% block main %}
+
+    <article class="games" id="pokemon-timeline">
+      <section class="logos">
+      <a href="#pkmn-red"><img src="{{ url_for('static', filename='images/pkmn-red-logo.png') }}" alt="Red logo" width="100">
+
+      <a href="#pkmn-blue"><img src="{{ url_for('static', filename='images/pkmn-blue-logo.png') }}" alt="Blue logo" width="85">
+
+      <a href="#pkmn-yellow"><img src="{{ url_for('static', filename='images/pkmn-yellow-logo.png') }}" alt="Yellow logo" width="100">
+
+      <a href="#pkmn-silver"><img src="{{ url_for('static', filename='images/pkmn-silver-logo.png') }}" alt="Silver logo" width="100">
+
+      <a href="#pkmn-gold"><img src="{{ url_for('static', filename='images/pkmn-gold-logo.png') }}" alt="Gold logo" width="100">
+
+      <a href="#pkmn-crystal"><img src="{{ url_for('static', filename='images/pkmn-crystal-logo.png') }}" alt="Crystal logo" width="100">
+
+    </section>
+    </article>
+    
+    <section class="games" id="pkmn-red">
+    </section>
+
+    <section class="games" id="pkmn-blue">
+    </section>
+
+    <section class="games" id="pkmn-yellow">
+    </section>
+
+    <section class="games" id="pkmn-silver">
+    </section>
+
+    <section class="games" id="pkmn-gold">
+    </section>
+
+    <section class="games" id="pkmn-crystal">
+    </section>
+
+{% endblock %}

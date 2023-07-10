@@ -1,0 +1,164 @@
+*{
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+#main-nav {
+  text-align: center;
+  width: 100%;
+  top: 0;
+  margin-top: 3vh;
+}
+
+#main-nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-nav a:hover {
+  color: #c1c1c1;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+}
+
+a:active {
+  color: blue;
+}
+
+nav a.active {
+  color: #1e1e1e;
+  background: white;
+}
+
+body{
+    background-image: url("/static/images/zelda-forum.jpg");
+    background-size: cover;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    margin-bottom: 5vh;
+    border-radius: 2vh;
+  }
+
+.container h3 {
+    border-top: 3px solid black;
+  }
+
+.hundred{
+    margin-top: 12vh;
+}
+
+.thread{
+  margin-top: 100px;
+  background-image: url("/static/images/zelda.jpg");
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100vh;
+  margin-left: 50vh;
+
+}
+
+.subforum:first-child {
+  margin-top: 100vh;
+}
+
+.login-register{
+  background-image: url("/static/images/zelda.jpg");
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 25px;
+  width: 130vh;
+  margin-left: 40vh;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Added property */
+  margin-top: 20vh;
+  padding-top: 5vh;
+}
+
+.subforum {
+    background-image: url("/static/images/zelda.jpg");
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 25px;
+    width: 130vh;
+    margin-left: 40vh;
+    margin-bottom: 25px;
+  }
+
+.subforum:last-child {
+  margin-bottom: 50px;
+}
+
+.login-bar{
+  margin-top: 5vh;
+}
+
+.post {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 25px 5px; /* Consolidated padding shorthand */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.subforum-header-line{
+  background-color: black;
+  height: 5px;
+}
+
+.margin-left{
+  margin-left: 5px;
+}
+
+.thread-header-line{
+  background-color: black;
+  height: 5px;
+}
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 11px;
+  }
+}
+
+.login{
+  margin-top: 100px;
+}
+
