@@ -6,7 +6,6 @@ html {
   font-family: sans-serif;
 }
 
-<<<<<<< HEAD
 /* CSS Reset */
 * {
   margin: 0;
@@ -15,8 +14,6 @@ html {
 }
 
 
-=======
->>>>>>> origin/master
 #main-nav {
   padding: 10px;
   text-align: center;
@@ -49,11 +46,7 @@ html {
 
 .home-container {
   background-image: url('./assets/zelda.jpg');
-<<<<<<< HEAD
   background-size: 100%;
-=======
-  background-size: 100% 100%; /* Adjust background-size */
->>>>>>> origin/master
   background-position: center;
   min-height: 100vh;
   display: flex;
@@ -64,15 +57,8 @@ html {
   /* additional styles */
 }
 
-<<<<<<< HEAD
 #histendo-logo{
   margin-bottom: 70vh;
-=======
-.home-container h1,
-.home-container a {
-  color: #fff;
-  /* additional styles */
->>>>>>> origin/master
 }
 
 .games-container {
@@ -87,14 +73,8 @@ html {
   padding: 0px;
 }
 
-<<<<<<< HEAD
 .logos-container{
   height: 100vh;
-=======
-.history-grid{
-  height: 100vh;
-  padding: 0;
->>>>>>> origin/master
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -106,14 +86,9 @@ html {
 
 #history-links {
   display: grid;
-<<<<<<< HEAD
   margin-top: 5vh;
   grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
   grid-gap: 10vh; /* Adjust the gap between grid items */
-=======
-  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
-  grid-gap: 100px; /* Adjust the gap between grid items */
->>>>>>> origin/master
   justify-items: center;
   border: 5px solid black;
   border-radius: 25px;

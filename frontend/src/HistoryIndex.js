@@ -18,33 +18,24 @@ import castlevaniaLogo from './assets/game-icons/castlevania-logo.png';
 
 function HistoryIndex() {
   return (
-<<<<<<< HEAD
     <div className="logos-container">
       <div id="history-links">
-        <a href="/zelda_history"><img src={zeldaLogo} alt="Legend of Zelda logo" width="150" /></a>
+        <a href="/zelda_timeline"><img src={zeldaLogo} alt="Legend of Zelda logo" width="150" /></a>
         <a href="/mario_timeline"><img src={marioLogo} alt="Super Mario logo" width="150" /></a>
-        <a href="/metroid_history"><img src={metroidLogo} alt="Metroid logo" width="150" /></a>
+        <a href="/metroid_timeline"><img src={metroidLogo} alt="Metroid logo" width="150" /></a>
         <a href="/finalfantasy_timeline"><img src={ffLogo} alt="Final Fantasy logo" width="150" /></a>
-=======
-    <div className="history-grid">
-      <div id="history-links">
-        <a href="/zelda_history"><img src={zeldaLogo} alt="Legend of Zelda logo" width="150" /></a>
-        <a href="/mario_history"><img src={marioLogo} alt="Super Mario logo" width="150" /></a>
-        <a href="/metroid_history"><img src={metroidLogo} alt="Metroid logo" width="150" /></a>
-        <a href="/ff_history"><img src={ffLogo} alt="Final Fantasy logo" width="150" /></a>
->>>>>>> origin/master
-        <a href="/pkmn_history"><img src={pokemonLogo} alt="Pokemon logo" width="150" /></a>
-        <a href="/kirby_history"><img src={kirbyLogo} alt="Kirby logo" width="150" /></a>
-        <a href="/earthbound_history"><img src={earthboundLogo} alt="Earthbound logo" width="150" /></a>
-        <a href="/fzero_history"><img src={fzeroLogo} alt="F-Zero logo" width="150" /></a>
-        <a href="/dkc_history"><img src={dkcLogo} alt="Donkey Kong Country logo" width="150" /></a>
-        <a href="/starfox_history"><img src={starfoxLogo} alt="Starfox logo" width="150" /></a>
-        <a href="/warioland_history"><img src={warioLogo} alt="Wario logo" width="150" /></a>
-        <a href="/megaman_history"><img src={megamanLogo} alt="Megaman logo" width="150" /></a>
-        <a href="/megamanx_history"><img src={megamanxLogo} alt="Megaman X logo" width="150" /></a>
-        <a href="/megamanx_history"><img src={dqLogo} alt="Dragon Quest logo" width="150" /></a>
-        <a href="/megamanx_history"><img src={smashbrosLogo} alt="Smash Bros logo" width="150" /></a>
-        <a href="/megamanx_history"><img src={castlevaniaLogo} alt="Castlevania logo" width="150" /></a>
+        <a href="/pkmn_timeline"><img src={pokemonLogo} alt="Pokemon logo" width="150" /></a>
+        <a href="/kirby_timeline"><img src={kirbyLogo} alt="Kirby logo" width="150" /></a>
+        <a href="/earthbound_timeline"><img src={earthboundLogo} alt="Earthbound logo" width="150" /></a>
+        <a href="/fzero_timeline"><img src={fzeroLogo} alt="F-Zero logo" width="150" /></a>
+        <a href="/dkc_timeline"><img src={dkcLogo} alt="Donkey Kong Country logo" width="150" /></a>
+        <a href="/starfox_timeline"><img src={starfoxLogo} alt="Starfox logo" width="150" /></a>
+        <a href="/warioland_timeline"><img src={warioLogo} alt="Wario logo" width="150" /></a>
+        <a href="/megaman_timeline"><img src={megamanLogo} alt="Megaman logo" width="150" /></a>
+        <a href="/megamanx_timeline"><img src={megamanxLogo} alt="Megaman X logo" width="150" /></a>
+        <a href="/dq_timeline"><img src={dqLogo} alt="Dragon Quest logo" width="150" /></a>
+        <a href="/smashbros_timeline"><img src={smashbrosLogo} alt="Smash Bros logo" width="150" /></a>
+        <a href="/castlevania_timeline"><img src={castlevaniaLogo} alt="Castlevania logo" width="150" /></a>
       </div>
     </div>
   );
