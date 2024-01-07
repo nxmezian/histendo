@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: sans-serif;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#main-nav {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #090909;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 100
+}
+
+#main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+#main-nav a:hover {
+  color: #c1c1c1;
+}
+
+#main-nav.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.home-container {
+  background-image: url('./assets/zelda.jpg');
+  background-size: 100%;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0; 
+  /* additional styles */
+}
+
+#histendo-logo{
+  margin-bottom: 70vh;
+}
+
+.games-container {
+  background-image: url('./assets/games.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.logos-container{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#history-links {
+  display: grid;
+  margin-top: 5vh;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  grid-gap: 10vh; /* Adjust the gap between grid items */
+  justify-items: center;
+  border: 5px solid black;
+  border-radius: 25px;
+  padding: 4vh;
+}
