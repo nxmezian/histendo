@@ -3,9 +3,8 @@ import './style.css';
 
 const Music = () => {
   return (
-          // Games = History + Start Screens + Consoles + Specials + ?   // 
     <div>
-        "HEEEY HOW YOU DOIN?"
+        "empty"
     </div>
     
   );

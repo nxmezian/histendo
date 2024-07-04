@@ -6,9 +6,9 @@ function mainNav() {
     <nav id="main-nav">
       <Link to="/">Home</Link>
       <Link to="/timelines">Timelines</Link>
-      <Link to="/artwork">Artwork</Link>
-      <Link to="/music">Start Screens</Link>
-      <Link to="/music">Music</Link>
+      <Link to="/under_construction">Artwork</Link>
+      <Link to="/under_construction">Start Screens</Link>
+      <Link to="/under_construction">Music</Link>
     </nav>
   );
 }

@@ -54,7 +54,18 @@ html {
   justify-content: center;
   align-items: center;
   padding: 0; 
-  /* additional styles */
+}
+
+.under-construction {
+  background-image: url('./assets/archive/3d-nintendo-poster-cla53aqjoq9ozobp.webp');
+  background-size: 100%;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0; 
 }
 
 #histendo-logo{

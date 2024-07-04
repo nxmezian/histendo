@@ -5,7 +5,6 @@ import './style.css';
 
 const Timelines = () => {
   return (
-          // Games = History + Start Screens + Consoles + Specials + ?   // 
     <div className="games-container"> 
       <MainNav />
       <HistoryIndex />

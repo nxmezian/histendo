@@ -7,6 +7,7 @@ import Music from './Music';
 import MarioTimeline from './MarioTimeline'
 import FinalFantasyTimeline from './FinalFantasyTimeline'; 
 import ZeldaTimeline from './ZeldaTimeline';
+import UnderConstruction from './UnderConstruction';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="mario_timeline" element={<MarioTimeline />} />
         <Route path="finalfantasy_timeline" element={<FinalFantasyTimeline />} />
         <Route path="zelda_timeline" element={<ZeldaTimeline />} />
+        <Route path="under_construction" element={<UnderConstruction />} />
       </Routes>
     </div>
   );
