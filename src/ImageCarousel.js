@@ -22,7 +22,7 @@ const ImageCarousel = ({ selectedImage, images }) => {
         <div key={index}>
           {/* Use anchor tags to make the images clickable */}
           <a href="#/" onClick={() => handleImageClick(index)}>
-            <img src={image} alt={`Image ${index + 1}`} />
+            <img src={image} />
           </a>
         </div>
       ))}
