@@ -4,7 +4,7 @@ import './style.css';
 const Music = () => {
   return (
     <div>
-        "empty"
+        <h1>"empty"</h1>
     </div>
     
   );

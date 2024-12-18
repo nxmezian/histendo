@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <div className="home-container">
         <MainNav />
+        <p>TEST</p>
         <img src={HistendoLogo} id="histendo-logo" alt="Histendo Logo" />
       </div>
     </>
