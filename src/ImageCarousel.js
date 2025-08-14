@@ -1,32 +1,40 @@
-import React, { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React, { useState, useEffect } from 'react';
+import './ImageCarousel.css'; // Create this file for basic styles
 
-const ImageCarousel = ({ selectedImage, images }) => {
-  const [selectedIndex, setSelectedIndex] = useState(
-    images.findIndex((image) => image === selectedImage)
-  );
+const ImageCarousel = ({ images, selectedImage }) => {
+  const initialIndex = Math.max(0, images.findIndex(img => img === selectedImage));
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
-  const handleImageClick = (index) => {
-    setSelectedIndex(index);
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  useEffect(() => {
+    // Update index if selectedImage prop changes
+    const newIndex = images.findIndex(img => img === selectedImage);
+    if (newIndex !== -1) {
+      setCurrentIndex(newIndex);
+    }
+  }, [selectedImage, images]);
+
   return (
-    <Carousel
-      infiniteLoop
-      showThumbs={false}
-      showStatus={false}
-      selectedItem={selectedIndex}
-    >
-      {images.map((image, index) => (
-        <div key={index}>
-          {/* Use anchor tags to make the images clickable */}
-          <a href="#/" onClick={() => handleImageClick(index)}>
-            <img src={image} />
-          </a>
-        </div>
-      ))}
-    </Carousel>
+    <div className="carousel-container">
+      <button className="carousel-button left" onClick={goToPrev}>&lt;</button>
+
+      <div className="carousel-image-wrapper">
+        <img
+          src={images[currentIndex]}
+          alt={`Slide ${currentIndex + 1}`}
+          className="carousel-image"
+        />
+      </div>
+
+      <button className="carousel-button right" onClick={goToNext}>&gt;</button>
+    </div>
   );
 };
 
