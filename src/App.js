@@ -15,7 +15,7 @@ export default function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Timelines" element={<Timelines />} />
+        <Route path="timelines" element={<Timelines />} />
         <Route path="music" element={<Music />} />
         <Route path="mario_timeline" element={<MarioTimeline />} />
         <Route path="finalfantasy_timeline" element={<FinalFantasyTimeline />} />

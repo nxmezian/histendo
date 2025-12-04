@@ -44,16 +44,33 @@ html {
   top: 0;
 }
 
-.home-container {
-  background-image: url('./assets/zelda.jpg');
-  background-size: 100%;
+.fullscreen-section {
+
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0; 
+}
+
+.home-1{
+    background-image: url('./assets/zelda.jpg');
+}
+
+.home-2{
+  background-image: url('./assets/home2.png')
+}
+
+.home-3{
+  background-image: url('./assets/home3.jpg')
+}
+.home-4{
+  background-image: url('./assets/home4.png')
 }
 
 .under-construction {
@@ -73,7 +90,7 @@ html {
 }
 
 .games-container {
-  background-image: url('./assets/games.jpg');
+/*  background-image: url('./assets/games.jpg');*/
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -85,7 +102,7 @@ html {
 }
 
 .logos-container{
-  height: 100vh;
+  height: 50vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -101,7 +118,6 @@ html {
   grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
   grid-gap: 10vh; /* Adjust the gap between grid items */
   justify-items: center;
-  border: 5px solid black;
-  border-radius: 25px;
+
   padding: 4vh;
 }
