@@ -1,18 +1,18 @@
 html {
-  scroll-behavior: smooth;
+  scroll-snap-type:  y mandatory;
 }
 
 *{
   font-family: sans-serif;
-}
 
-/* CSS Reset */
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  margin: 0
+}
 
 #main-nav {
   padding: 10px;
@@ -56,6 +56,10 @@ html {
   justify-content: center;
   align-items: center;
   padding: 0; 
+}
+
+.screen {
+  scroll-snap-align: start;
 }
 
 .home-1{
