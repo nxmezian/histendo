@@ -31,7 +31,7 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
   return (
     <div className="carousel-container">
       <button className="carousel-button left" onClick={goToPrev}>
-        &lt;
+        ↑
       </button>
 
       <div
@@ -39,18 +39,21 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
         style={{ transform: `translateY(-${currentIndex * 100}vh)` }}
       >
         {games.map((game, idx) => (
-          <div key={game.id ?? idx}>
+          <div key={game.id ?? idx} className="carousel-slide"> 
           <img
             src={game.image}
             alt={`Slide ${idx + 1}`}
             className="carousel-image"
           />
+          <div className="description">{game.description}</div>
+          <img className="logo" src={game.logo} />
         </div>
         ))}
+
       </div>
 
       <button className="carousel-button right" onClick={goToNext}>
-        &gt;
+        ↓
       </button>
     </div>
   );

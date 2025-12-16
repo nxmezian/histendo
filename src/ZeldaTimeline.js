@@ -2,10 +2,12 @@ import React from 'react';
 import TimelineGame from './TimelineGame';
 import totkImage from './assets/images/zelda/totk.jpg';
 import botwImage from './assets/images/zelda/botw.jpg';
+import totkLogo from  './assets/images/zelda/ocarina-logo.png';
+import botwLogo from './assets/images/zelda/botw-logo.png';
 import ImageCarousel from './ImageCarousel';
 
 const totk = new TimelineGame(
-    null,
+    totkLogo,
     'The Legend of Zelda: Tears of the Kingdom',
     2023,
     null,
@@ -14,7 +16,7 @@ const totk = new TimelineGame(
 );
 
 const botw = new TimelineGame(
-    null,
+    botwLogo,
     'The Legend of Zelda: Breath of the Wild',
     2023,
     null,
