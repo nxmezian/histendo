@@ -1,3 +1,4 @@
+import './style.css'
 import { useEffect } from "react";
 import MainNav from "./MainNav";
 import HistendoLogo from "./assets/images/histendo.png";
@@ -40,14 +41,29 @@ export default function Home() {
   return (
     <>
       <MainNav />
-      <div className="fullscreen-section home-1 screen">
-        <img src={HistendoLogo} id="histendo-logo" alt="Histendo Logo" />
 
+
+      <img src={HistendoLogo} id="histendo-logo" alt="Histendo Logo" />
+        
+      <div className="fullscreen-section home-1 screen">
+        <button 
+        className="scroll-button up" 
+        onClick={() => 
+          window.scrollBy({
+          top: -window.innerHeight,
+          behavior: "smooth"})}>↑
+          </button>
         <svg className="svg-draw-text">
           <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle">
             The history of Nintendo
           </text>
         </svg>
+        <button 
+        className="scroll-button down"
+        onClick={() => window.scrollBy({
+          top: +window.innerHeight,
+          behavior: "smooth"})}>↓
+          </button>
       </div>
 
       <div className="fullscreen-section home-2 screen">
@@ -69,7 +85,7 @@ export default function Home() {
       <div className="fullscreen-section home-4 screen">
         <svg className="svg-draw-text">
           <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle">
-            and music
+            and unforgettable music
           </text>
         </svg>
       </div>

@@ -141,9 +141,35 @@ html {
 #history-links {
   display: grid;
   margin-top: 5vh;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
-  grid-gap: 10vh; /* Adjust the gap between grid items */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-gap: 10vh; 
   justify-items: center;
 
   padding: 4vh;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 10%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+}
+
+.scroll-button.up {
+  position: fixed;
+  top: 10vh;
+  left: 2vh;
+}
+
+.scroll-button.down {
+  position: fixed;
+  top: 93vh;
+  right: 2vh;
 }

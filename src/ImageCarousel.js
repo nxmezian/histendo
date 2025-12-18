@@ -28,6 +28,8 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
     }
   }, [selectedGame, games]);
 
+  // const [showDescription, setShowDescription] = usesState(false);
+
   return (
     <div className="carousel-container">
       <button className="carousel-button left" onClick={goToPrev}>

@@ -6,10 +6,12 @@ import totkLogo from  './assets/images/zelda/ocarina-logo.png';
 import botwLogo from './assets/images/zelda/botw-logo.png';
 import ImageCarousel from './ImageCarousel';
 
+let totkDescription = `Embark on a new adventure in "The Legend of Zelda: Tears of the Kingdom," the highly anticipated sequel to the critically acclaimed "Breath of the Wild." Explore a vast and dynamic world filled with new challenges, innovative gameplay mechanics, and an engaging storyline that continues the legacy of the beloved franchise. Uncover ancient secrets, harness new powers, and shape your destiny in this epic journey through Hyrule.`;
+let botwDescription = `Step into a breathtaking open world in "The Legend of Zelda: Breath of the Wild," where adventure awaits at every turn. As Link, awaken from a century-long slumber to a land in peril, and embark on a quest to defeat Calamity Ganon and restore peace to Hyrule. With unparalleled freedom to explore, solve puzzles, and engage in dynamic combat, this game redefines the boundaries of the action-adventure genre. Experience the beauty and danger of Hyrule like never before.`;
 const totk = new TimelineGame(
     totkLogo,
     'The Legend of Zelda: Tears of the Kingdom',
-    2023,
+    totkDescription,
     null,
     totkImage,
     
@@ -18,7 +20,7 @@ const totk = new TimelineGame(
 const botw = new TimelineGame(
     botwLogo,
     'The Legend of Zelda: Breath of the Wild',
-    2023,
+    botwDescription,
     null,
     botwImage,
     
