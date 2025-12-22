@@ -6,6 +6,7 @@ const UnderConstruction = () => {
     return (
       <div className="under-construction"> 
       <MainNav />
+      <h1>This page is under construction</h1>
       </div>
       
     );

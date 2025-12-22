@@ -28,7 +28,11 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
     }
   }, [selectedGame, games]);
 
-  // const [showDescription, setShowDescription] = usesState(false);
+const [showDescription, setShowDescription] = useState(0);
+
+useEffect(() => {
+  setShowDescription(false)
+}, [currentIndex])
 
   return (
     <div className="carousel-container">
@@ -47,11 +51,25 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
             alt={`Slide ${idx + 1}`}
             className="carousel-image"
           />
-          <div className="description">{game.description}</div>
-          <img className="logo" src={game.logo} />
-        </div>
-        ))}
+    <img className="logo" src={game.logo} alt={`${game.title} logo`}/>
 
+    {idx === currentIndex && (
+      <>
+        <button
+          className="description-button"
+          onClick={() => setShowDescription(prev => !prev)}
+        >
+          {showDescription ? 'Hide Info' : 'Show Info'}
+        </button>
+
+        <div className={`description ${showDescription ? 'visible' : ''}`}>
+          {game.description}
+        </div>
+      </>
+    )}
+
+        </div>
+      ))}
       </div>
 
       <button className="carousel-button right" onClick={goToNext}>

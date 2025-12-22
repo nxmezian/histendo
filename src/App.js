@@ -17,9 +17,11 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="timelines" element={<Timelines />} />
         <Route path="music" element={<Music />} />
-        <Route path="mario_timeline" element={<MarioTimeline />} />
-        <Route path="finalfantasy_timeline" element={<FinalFantasyTimeline />} />
-        <Route path="zelda_timeline" element={<ZeldaTimeline />} />
+
+        <Route path="timelines/mario" element={<MarioTimeline />} />
+        <Route path="timelines/finalfantasy" element={<FinalFantasyTimeline />} />
+        <Route path="timelines/zelda" element={<ZeldaTimeline />} />
+
         <Route path="under_construction" element={<UnderConstruction />} />
       </Routes>
     </div>

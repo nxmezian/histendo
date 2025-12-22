@@ -77,3 +77,41 @@ html {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.description {
+  position: absolute;
+  bottom: 35%;
+  left: 12%;
+  max-width: 75%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 12px;
+
+  opacity: 0;
+  transform: translateY(25px) scale(0.98);
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.description.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.description-button {
+  position: absolute;
+  bottom: 2%;
+  left: 0.5%;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  background: white;
+  color: black;
+  font-weight: 600;
+}

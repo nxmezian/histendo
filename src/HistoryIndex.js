@@ -20,22 +20,22 @@ function HistoryIndex() {
   return (
     <div className="logos-container">
       <div id="history-links">
-        <a href="/zelda_timeline"><img src={zeldaLogo} alt="Legend of Zelda logo" width="150" loading="lazy" /></a>
-        <a href="/mario_timeline"><img src={marioLogo} alt="Super Mario logo" width="150" loading="lazy" /></a>
-        <a href="/metroid_timeline"><img src={metroidLogo} alt="Metroid logo" width="150" loading="lazy" /></a>
-        <a href="/finalfantasy_timeline"><img src={ffLogo} alt="Final Fantasy logo" width="150" loading="lazy" /></a>
-        <a href="/pkmn_timeline"><img src={pokemonLogo} alt="Pokemon logo" width="150" loading="lazy" /></a>
-        <a href="/kirby_timeline"><img src={kirbyLogo} alt="Kirby logo" width="150" loading="lazy" /></a>
-        <a href="/earthbound_timeline"><img src={earthboundLogo} alt="Earthbound logo" width="150" loading="lazy" /></a>
-        <a href="/fzero_timeline"><img src={fzeroLogo} alt="F-Zero logo" width="150" loading="lazy" /></a>
-        <a href="/dkc_timeline"><img src={dkcLogo} alt="Donkey Kong Country logo" width="150" loading="lazy" /></a>
-        <a href="/starfox_timeline"><img src={starfoxLogo} alt="Starfox logo" width="150" loading="lazy" /></a>
-        <a href="/warioland_timeline"><img src={warioLogo} alt="Wario logo" width="150" loading="lazy" /></a>
-        <a href="/megaman_timeline"><img src={megamanLogo} alt="Megaman logo" width="150" loading="lazy" /></a>
-        <a href="/megamanx_timeline"><img src={megamanxLogo} alt="Megaman X logo" width="150" loading="lazy" /></a>
-        <a href="/dq_timeline"><img src={dqLogo} alt="Dragon Quest logo" width="150" loading="lazy" /></a>
-        <a href="/smashbros_timeline"><img src={smashbrosLogo} alt="Smash Bros logo" width="150" loading="lazy" /></a>
-        <a href="/castlevania_timeline"><img src={castlevaniaLogo} alt="Castlevania logo" width="150" loading="lazy" /></a>
+        <a href="timelines/zelda"><img src={zeldaLogo} alt="Legend of Zelda logo" width="150" loading="lazy" /></a>
+        <a href="timelines/mario"><img src={marioLogo} alt="Super Mario logo" width="150" loading="lazy" /></a>
+        <a href="timelines/metroid"><img src={metroidLogo} alt="Metroid logo" width="150" loading="lazy" /></a>
+        <a href="timelines/finalfantasy"><img src={ffLogo} alt="Final Fantasy logo" width="150" loading="lazy" /></a>
+        <a href="timelines/pkmn"><img src={pokemonLogo} alt="Pokemon logo" width="150" loading="lazy" /></a>
+        <a href="timelines/kirby"><img src={kirbyLogo} alt="Kirby logo" width="150" loading="lazy" /></a>
+        <a href="timelines/earthbound"><img src={earthboundLogo} alt="Earthbound logo" width="150" loading="lazy" /></a>
+        <a href="timelines/fzero"><img src={fzeroLogo} alt="F-Zero logo" width="150" loading="lazy" /></a>
+        <a href="timelines/dkc"><img src={dkcLogo} alt="Donkey Kong Country logo" width="150" loading="lazy" /></a>
+        <a href="timelines/starfox"><img src={starfoxLogo} alt="Starfox logo" width="150" loading="lazy" /></a>
+        <a href="timelines/warioland"><img src={warioLogo} alt="Wario logo" width="150" loading="lazy" /></a>
+        <a href="timelines/megaman"><img src={megamanLogo} alt="Megaman logo" width="150" loading="lazy" /></a>
+        <a href="timelines/megamanx"><img src={megamanxLogo} alt="Megaman X logo" width="150" loading="lazy" /></a>
+        <a href="timelines/dq"><img src={dqLogo} alt="Dragon Quest logo" width="150" loading="lazy" /></a>
+        <a href="timelines/smashbros"><img src={smashbrosLogo} alt="Smash Bros logo" width="150" loading="lazy" /></a>
+        <a href="timelines/castlevania"><img src={castlevaniaLogo} alt="Castlevania logo" width="150" loading="lazy" /></a>
       </div>
     </div>
   );
