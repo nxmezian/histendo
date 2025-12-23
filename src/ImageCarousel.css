@@ -79,9 +79,10 @@ html {
 
 .description {
   position: absolute;
-  bottom: 35%;
-  left: 12%;
+  bottom: 8%;
+  left: 0.5%;
   max-width: 75%;
+  
   padding: 1rem;
   background: rgba(0, 0, 0, 0.85);
   color: white;
