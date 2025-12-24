@@ -28,6 +28,9 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
     }
   }, [selectedGame, games]);
 
+  const backToTimeline = () => {
+    selectedGame = null;
+  }
 const [showDescription, setShowDescription] = useState(0);
 
 useEffect(() => {
@@ -39,7 +42,7 @@ useEffect(() => {
       <button className="carousel-button left" onClick={goToPrev}>
         ↑
       </button>
-
+      
       <div
         className="carousel-image-wrapper"
         style={{ transform: `translateY(-${currentIndex * 100}vh)` }}

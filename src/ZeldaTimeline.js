@@ -30,21 +30,21 @@ const botw = new TimelineGame(
 );
 
 const ZeldaTimeline = () => {
-    const [selectedGame, setSelectedGame] = useState(totk);
+    const [selectedGame, setSelectedGame] = useState();
     const games = [
         totk,
         botw
     ]
-      const carouselRef = useRef(null);
 
-useEffect(() => {
-  const el = document.querySelector('.carousel-container');
-  if (el) {
-    const offset = 0; // pixels from top
-    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }
-}, [selectedGame]);
+    useEffect(() => {
+    if (!selectedGame) return;
+
+    const el = document.querySelector('.carousel-container');
+    if (el) {
+        const top = el.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+    }
+    }, [selectedGame]);
 
   return (
     <>
