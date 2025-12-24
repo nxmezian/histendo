@@ -3,6 +3,15 @@ html {
   scroll-snap-type:  y mandatory;
 }
 
+.timeline {
+  background-image: "./assets/images/zelda/botw-logo.png";
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin: auto;
+}
+
 .carousel-container {
   position: relative;
   margin: auto;
@@ -19,7 +28,7 @@ html {
 }
 
 .carousel-slide {
-  height: 100vh;          /* 🔑 critical */
+  height: 100vh;          
   position: relative;
   display: flex;
   flex-direction: column;
