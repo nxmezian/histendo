@@ -16,8 +16,17 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
 
   const goToPrev = () => {
     if (!games.length) return;
-    setCurrentIndex((prev) => (prev - 1 + games.length) % games.length);
+    scrollToTimeline();
   };
+
+  const scrollToTimeline = () => {
+    const timelineEl = document.querySelector(".timeline");
+    if (timelineEl) {
+      const top = timelineEl.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top, behavior: 'smooth' })
+
+    }
+}
 
   useEffect(() => {
     const newIndex = games.findIndex(
@@ -28,9 +37,6 @@ const ImageCarousel = ({ games = [], selectedGame }) => {
     }
   }, [selectedGame, games]);
 
-  const backToTimeline = () => {
-    selectedGame = null;
-  }
 const [showDescription, setShowDescription] = useState(0);
 
 useEffect(() => {
@@ -42,7 +48,7 @@ useEffect(() => {
       <button className="carousel-button left" onClick={goToPrev}>
         ↑
       </button>
-      
+
       <div
         className="carousel-image-wrapper"
         style={{ transform: `translateY(-${currentIndex * 100}vh)` }}
