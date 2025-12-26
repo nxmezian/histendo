@@ -1,89 +1,70 @@
-import React, { useState, useEffect } from 'react';
-import './ImageCarousel.css'; 
+import React, { useEffect, useRef } from 'react';
+import './ImageCarousel.css';
 
-const ImageCarousel = ({ games = [], selectedGame }) => {
-  const initialIndex = Math.max(
-    0,
-    games.findIndex(game => game.image === selectedGame?.image)
-  );
+/**
+ * REUSABLE vertical scrollable carousel
+ * - scroll-snap for natural scrolling
+ * - up/down arrows for navigation
+ * - updates activeIndex on user scroll
+ * - programmatic scroll does not trigger activeIndex change
+ */
+const ImageCarousel = ({ items = [], activeIndex = 0, onIndexChange }) => {
+  const containerRef = useRef();
+  const isScrollingRef = useRef(false);
 
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
-
-  const goToNext = () => {
-    if (!games.length) return;
-    setCurrentIndex((prev) => (prev + 1) % games.length);
-  };
-
-  const goToPrev = () => {
-    if (!games.length) return;
-    scrollToTimeline();
-  };
-
-  const scrollToTimeline = () => {
-    const timelineEl = document.querySelector(".timeline");
-    if (timelineEl) {
-      const top = timelineEl.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({ top, behavior: 'smooth' })
-
-    }
-}
-
+  // Programmatic scroll when activeIndex changes
   useEffect(() => {
-    const newIndex = games.findIndex(
-      game => game.image === selectedGame?.image
-    );
-    if (newIndex !== -1) {
-      setCurrentIndex(newIndex);
+    if (!containerRef.current) return;
+    const child = containerRef.current.children[activeIndex];
+    if (child) {
+      isScrollingRef.current = true;
+      child.scrollIntoView({ behavior: 'smooth' });
+      const timeout = setTimeout(() => {
+        isScrollingRef.current = false;
+      }, 500); // match scroll duration
+      return () => clearTimeout(timeout);
     }
-  }, [selectedGame, games]);
+  }, [activeIndex]);
 
-const [showDescription, setShowDescription] = useState(0);
+  // Update activeIndex on user scroll
+  const handleScroll = () => {
+    if (isScrollingRef.current) return;
+    if (!containerRef.current) return;
+    const scrollTop = containerRef.current.scrollTop;
+    const vh = window.innerHeight;
+    const newIndex = Math.round(scrollTop / vh);
+    if (newIndex !== activeIndex) onIndexChange(newIndex);
+  };
 
-useEffect(() => {
-  setShowDescription(false)
-}, [currentIndex])
+  const goNext = () => {
+    if (activeIndex < items.length - 1) onIndexChange(activeIndex + 1);
+  };
+
+  const goPrev = () => {
+    if (activeIndex > 0) onIndexChange(activeIndex - 1);
+  };
 
   return (
     <div className="carousel-container">
-      <button className="carousel-button left" onClick={goToPrev}>
-        ↑
-      </button>
-
+      <button className="carousel-button left" onClick={goPrev}>↑</button>
       <div
-        className="carousel-image-wrapper"
-        style={{ transform: `translateY(-${currentIndex * 100}vh)` }}
+        className="carousel-scroll-wrapper"
+        ref={containerRef}
+        onScroll={handleScroll}
       >
-        {games.map((game, idx) => (
-          <div key={game.id ?? idx} className="carousel-slide"> 
-          <img
-            src={game.image}
-            alt={`Slide ${idx + 1}`}
-            className="carousel-image"
-          />
-    <img className="logo" src={game.logo} alt={`${game.title} logo`}/>
-
-    {idx === currentIndex && (
-      <>
-        <button
-          className="description-button"
-          onClick={() => setShowDescription(prev => !prev)}
-        >
-          {showDescription ? 'Hide Info' : 'Show Info'}
-        </button>
-
-        <div className={`description ${showDescription ? 'visible' : ''}`}>
-          {game.description}
-        </div>
-      </>
-    )}
-
-        </div>
-      ))}
+        {items.map((item, idx) => (
+          <div key={idx} className="carousel-slide">
+            <img src={item.image} alt={item.title} className="carousel-image" />
+            {item.logo && (
+              <img src={item.logo} alt={`${item.title} logo`} className="logo" />
+            )}
+            {idx === activeIndex && item.description && (
+              <div className="description">{item.description}</div>
+            )}
+          </div>
+        ))}
       </div>
-
-      <button className="carousel-button right" onClick={goToNext}>
-        ↓
-      </button>
+      <button className="carousel-button right" onClick={goNext}>↓</button>
     </div>
   );
 };

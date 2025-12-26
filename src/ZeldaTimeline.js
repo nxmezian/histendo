@@ -1,68 +1,72 @@
 import React, { useState, useEffect } from 'react';
-import './ImageCarousel.css'; 
+import './ImageCarousel.css';
 import TimelineGame from './TimelineGame';
 import ImageCarousel from './ImageCarousel';
 
 import zeldaTimeline from './assets/images/zelda/zelda-timeline.jpg';
 import totkImage from './assets/images/zelda/totk.jpg';
 import botwImage from './assets/images/zelda/botw.jpg';
-import totkLogo from  './assets/images/zelda/totk-logo.png';
+import skywardImage from './assets/images/zelda/skyward.jpg';
+import totkLogo from './assets/images/zelda/totk-logo.png';
 import botwLogo from './assets/images/zelda/botw-logo2.png';
+import skywardLogo from './assets/images/zelda/skyward-logo.png';
 
+const games = [
+  new TimelineGame(totkLogo, 'Tears of the Kingdom', 'Explore Hyrule in TOTK...', null, totkImage),
+  new TimelineGame(botwLogo, 'Breath of the Wild', 'Explore Hyrule in BOTW...', null, botwImage),
+  new TimelineGame(skywardLogo, 'Skyward Sword', 'Skyward Sword description...', null, skywardImage)
+];
 
-let totkDescription = `Embark on a new adventure in "The Legend of Zelda: Tears of the Kingdom," the highly anticipated sequel to the critically acclaimed "Breath of the Wild." Explore a vast and dynamic world filled with new challenges, innovative gameplay mechanics, and an engaging storyline that continues the legacy of the beloved franchise. Uncover ancient secrets, harness new powers, and shape your destiny in this epic journey through Hyrule.`;
-let botwDescription = `Step into a breathtaking open world in "The Legend of Zelda: Breath of the Wild," where adventure awaits at every turn. As Link, awaken from a century-long slumber to a land in peril, and embark on a quest to defeat Calamity Ganon and restore peace to Hyrule. With unparalleled freedom to explore, solve puzzles, and engage in dynamic combat, this game redefines the boundaries of the action-adventure genre. Experience the beauty and danger of Hyrule like never before.`;
-
-const totk = new TimelineGame(
-    totkLogo,
-    'The Legend of Zelda: Tears of the Kingdom',
-    totkDescription,
-    null,
-    totkImage,
-    
-);
-
-const botw = new TimelineGame(
-    botwLogo,
-    'The Legend of Zelda: Breath of the Wild',
-    botwDescription,
-    null,
-    botwImage,
-    
-);
+const timelineSlide = {
+  image: zeldaTimeline,
+  logo: null,
+  description: null
+};
 
 const ZeldaTimeline = () => {
-    const [selectedGame, setSelectedGame] = useState();
-    const games = [
-        totk,
-        botw
-    ]
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [navVisible, setNavVisible] = useState(true); 
+  const slides = [timelineSlide, ...games];
 
-    useEffect(() => {
-    if (!selectedGame) return;
-
-    const el = document.querySelector('.carousel-container');
-    if (el) {
-        const top = el.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({ top, behavior: 'smooth' });
-    }
-    }, [selectedGame]);
+  useEffect(() => {
+    const timeout = setTimeout(() => setNavVisible(false), 3000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <>
-      <div className="timeline" style={{backgroundImage: `url(${zeldaTimeline})`}}>
-        <div className="logo-container">
-        <nav>
-          <button onClick={() => setSelectedGame(totk)}><img src={totkLogo} alt="TOTK logo"/><p>2023</p></button>
-          <button onClick={() => setSelectedGame(botw)}><img src={botwLogo} alt="BOTW logo"/><p>2017</p></button>
-        </nav>
+      {activeIndex > 0 && (
+        <div className={`timeline-nav ${navVisible ? 'visible' : ''}`}>
+          {games.map((game, idx) => (
+            <button key={idx} onClick={() => setActiveIndex(idx + 1)}>
+              <img src={game.logo} alt={`${game.title} logo`} />
+              <p>{idx === 0 ? '2023' : idx === 1 ? '2017' : '2013'}</p>
+            </button>
+          ))}
         </div>
-      </div>
+      )}
 
-      <ImageCarousel selectedGame={selectedGame} games={games} />
+      <ImageCarousel
+        items={slides}
+        activeIndex={activeIndex}
+        onIndexChange={setActiveIndex}
+      />
+
+      {activeIndex === 0 && (
+        <div className="timeline-centered-logos">
+          {games.map((game, idx) => (
+            <img
+              key={idx}
+              src={game.logo}
+              alt={`${game.title} logo`}
+              onClick={() => setActiveIndex(idx + 1)}
+              className="centered-logo"
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 };
-
 
 export default ZeldaTimeline;
