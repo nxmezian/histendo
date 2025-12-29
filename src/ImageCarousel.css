@@ -1,4 +1,3 @@
-/* Full-page carousel */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -27,14 +26,19 @@
   object-fit: cover;
 }
 
-/* Logos inside slides */
 .logo {
   position: absolute;
-  top: 20px;
-  left: 50%;
+  top: 3%;
+  left: 4%;
   transform: translateX(-50%);
   width: 100px;
   height: auto;
+}
+
+.description-button {
+  position: relative;
+  bottom: 4%;
+  left: 1%;
 }
 
 /* Centered logos on first slide */
@@ -59,19 +63,17 @@
   transform: scale(1.1);
 }
 
-/* Description box */
 .description {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 5%;
+  left: 0.5%;
   color: #fff;
-  max-width: 50%;
+  max-width: 75%;
   background: rgba(0,0,0,0.4);
   padding: 10px;
   border-radius: 5px;
 }
 
-/* Up/down arrows on sides */
 .carousel-button {
   position: fixed;
   font-size: 2rem;

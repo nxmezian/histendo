@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ImageCarousel.css';
 
 /**
@@ -11,8 +11,12 @@ import './ImageCarousel.css';
 const ImageCarousel = ({ items = [], activeIndex = 0, onIndexChange }) => {
   const containerRef = useRef();
   const isScrollingRef = useRef(false);
+  const [descriptionVisible, setDescriptionVisible] = useState(false);
 
-  // Programmatic scroll when activeIndex changes
+  const toggleDescription = () => {
+    setDescriptionVisible(prev =>! prev);
+  }
+
   useEffect(() => {
     if (!containerRef.current) return;
     const child = containerRef.current.children[activeIndex];
@@ -56,9 +60,10 @@ const ImageCarousel = ({ items = [], activeIndex = 0, onIndexChange }) => {
           <div key={idx} className="carousel-slide">
             <img src={item.image} alt={item.title} className="carousel-image" />
             {item.logo && (
+              
               <img src={item.logo} alt={`${item.title} logo`} className="logo" />
-            )}
-            {idx === activeIndex && item.description && (
+            )}            <button class="description-button" onClick={toggleDescription}>Description button</button>
+            {idx === activeIndex && item.description && descriptionVisible && (
               <div className="description">{item.description}</div>
             )}
           </div>
