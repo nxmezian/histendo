@@ -1,5 +1,5 @@
 import React from 'react';
-import HistoryIndex from './HistoryIndex';
+import HistoryIndex from './TimelineIndex';
 import MainNav from './MainNav';
 import './style.css';
 

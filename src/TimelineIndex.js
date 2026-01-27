@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.css';
+
 import zeldaLogo from './assets/game-icons/original-logo.jpg';
 import marioLogo from './assets/game-icons/odyssey-logo.jpg';
 import metroidLogo from './assets/game-icons/metroid1-logo.jpg';
@@ -16,7 +18,7 @@ import dqLogo from './assets/game-icons/dq-logo.png';
 import smashbrosLogo from './assets/game-icons/smashbros-logo.png';
 import castlevaniaLogo from './assets/game-icons/castlevania-logo.png';
 
-function HistoryIndex() {
+function TimelineIndex() {
   return (
     <div className="logos-container">
       <div id="history-links">
@@ -41,4 +43,4 @@ function HistoryIndex() {
   );
 }
 
-export default HistoryIndex;
+export default TimelineIndex;

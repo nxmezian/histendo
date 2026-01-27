@@ -4,5 +4,3 @@ Artwork: andere indeling dan timelines? of game series aanhouden?
 Music: under construction;
 
 VANDAAG
--logo's toevoegen voor zelda en linken naar bijbehorende pagina'series
--scroll behavior van carousel naar slides en vice versa goed testen

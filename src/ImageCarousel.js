@@ -62,7 +62,11 @@ const ImageCarousel = ({ items = [], activeIndex = 0, onIndexChange }) => {
             {item.logo && (
               
               <img src={item.logo} alt={`${item.title} logo`} className="logo" />
-            )}            <button class="description-button" onClick={toggleDescription}>Description button</button>
+            )} 
+            {idx !== 0 && (            
+              <button className="description-button" onClick={toggleDescription}>
+                Expand info
+                </button>)}           
             {idx === activeIndex && item.description && descriptionVisible && (
               <div className="description">{item.description}</div>
             )}

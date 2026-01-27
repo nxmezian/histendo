@@ -3,6 +3,7 @@ import './ImageCarousel.css';
 import TimelineGame from './TimelineGame';
 import ImageCarousel from './ImageCarousel';
 
+import mainLogo from './assets/images/zelda/main-logo.png';
 import zeldaTimeline from './assets/images/zelda/zelda-timeline.jpg';
 import totkImage from './assets/images/zelda/totk.jpg';
 import botwImage from './assets/images/zelda/botw.jpg';
@@ -40,10 +41,10 @@ const ZeldaTimeline = () => {
     <>
       {activeIndex > 0 && (
         <div className={`timeline-nav ${navVisible ? 'visible' : ''}`}>
+          <button onClick={() => setActiveIndex(0)}>TOP</button>
           {games.map((game, idx) => (
             <button key={idx} onClick={() => setActiveIndex(idx + 1)}>
               <img src={game.logo} alt={`${game.title} logo`} />
-              <p>{idx === 0 ? '2023' : idx === 1 ? '2017' : '2013'}</p>
             </button>
           ))}
         </div>
@@ -54,7 +55,6 @@ const ZeldaTimeline = () => {
         activeIndex={activeIndex}
         onIndexChange={setActiveIndex}
       />
-
       {activeIndex === 0 && (
         <div className="timeline-centered-logos">
           {games.map((game, idx) => (
@@ -69,6 +69,7 @@ const ZeldaTimeline = () => {
         </div>
       )}
     </>
+    
   );
 };
 

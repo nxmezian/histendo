@@ -10,7 +10,6 @@ html {
   box-sizing: border-box;
 }
 
-
 #main-nav {
   padding: 10px;
   text-align: center;
@@ -116,7 +115,7 @@ html {
 }
 
 .games-container {
-/*  background-image: url('./assets/games.jpg');*/
+  background-image: url('./assets/games.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
