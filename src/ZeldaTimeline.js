@@ -55,19 +55,26 @@ const ZeldaTimeline = () => {
         activeIndex={activeIndex}
         onIndexChange={setActiveIndex}
       />
+    <div>
       {activeIndex === 0 && (
-        <div className="timeline-centered-logos">
-          {games.map((game, idx) => (
-            <img
-              key={idx}
-              src={game.logo}
-              alt={`${game.title} logo`}
-              onClick={() => setActiveIndex(idx + 1)}
-              className="centered-logo"
-            />
-          ))}
+        <div >
+          <div className='main-logo'>      
+            <img src={mainLogo}></img> 
+          </div>
+          <div className="timeline-centered-logos">
+            {games.map((game, idx) => (
+              <img
+                key={idx}
+                src={game.logo}
+                alt={`${game.title} logo`}
+                onClick={() => setActiveIndex(idx + 1)}
+                className="centered-logo"
+              />
+            ))}
+            </div>
         </div>
       )}
+      </div>
     </>
     
   );
