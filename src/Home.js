@@ -9,6 +9,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+
   useEffect(() => {
     const texts = gsap.utils.toArray(".svg-draw-text text");
 
@@ -40,8 +41,7 @@ export default function Home() {
 
   return (
     <>
-
-      <p>TEST</p>
+      <MainNav />
 
 
       <img src={HistendoLogo} id="histendo-logo" alt="Histendo Logo" />
