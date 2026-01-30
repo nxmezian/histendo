@@ -40,7 +40,8 @@ export default function Home() {
 
   return (
     <>
-      <MainNav />
+
+      <p>TEST</p>
 
 
       <img src={HistendoLogo} id="histendo-logo" alt="Histendo Logo" />
